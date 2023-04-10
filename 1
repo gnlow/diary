@@ -115,7 +115,7 @@ j 네가 이름을 불러주었을 때, 나는 나가 되고 너는 너가 된 �
 h 그러니까, 한 칸의 들여쓰기는 하나의 세계를 담고 있다는거구나.
 
 230410
-[code lang=zy]
+[code]
   Game: Int ->            // 클래스 이름을 대문자로 해야할까, 소문자로 해야할까?
     | move X Y
     | resign
@@ -133,8 +133,28 @@ h 그러니까, 한 칸의 들여쓰기는 하나의 세계를 담고 있다는�
         winner: Index.
           Even  -> o
           Odd   -> x
-
-
+[code]
+  Player can
+    | move X Y
+    | resign
+[code]
+  game:
+    player: Int.
+      Even  -> o
+      Odd   -> x
+    action:
+      | move X Y
+      | resign
+[code]
+  app:
+    model:
+    view: #
+      button
+        click: count up
+        style:
+          text: 24px red
+          
+      
 
 
 
