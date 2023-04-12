@@ -297,6 +297,22 @@ j 근데, '샤덴프로이데'보다는 착한 느낌인데..
 아, 제기랄, 그때 괜히 나서는게 아니었는데.
 날개에 자꾸만 모래가 껴서 퍼덕일때마다 찝찝하다.
 
+230413
+[code]
+  obj1:
+    x: 123
+    y: 456
+  diag: x + y
+  say obj1.diag // 579
+
+[code]
+  const obj1 = {
+    x: 123,
+    y: 456
+  }
+  const diag = ({x, y}) => x + y
+  console.log(diag(obj1))
+
 
 
 
