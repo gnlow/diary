@@ -1478,6 +1478,71 @@ IDE에는 잘못 치면 바로 혼난다.
   speed:
     delta time: Curr.time - Prev.time
     Curr.Val - Prev.Val ; / delta time
+
+230429
+[code]
+  Game:
+    size (x | y): Nat
+    Nat ->
+      Board
+      prev = game (Nat-1)
+      next = game (Nat+1)
+      x -> y ->
+        x | y: Num
+        Tile
+
+[code]
+  Game:
+    When ->
+      | go to Where
+      | eat What
+      | sleep
+      | wake up
+    am i sleeping?:
+      Game
+        ..
+          sleep -> yes
+          wake up -> no
+        . last
+        
+[code]
+  list: #
+    a
+    b
+    c
+    a
+    b
+    d
+  filtered: list .. (a | d) // [a, a, d]
+  
+  square: Num -> Num^2
+  square then plus 1: square .. Num -> Num + 1
+  
+  (I -> O) . ((I -> O) -> I2 -> O2): I2 -> O2
+  (I -> O) .. (O -> O2): I -> O2
+
+[code]
+  view: #
+    button "+1"
+      round 12px
+      blue
+      click: #
+        count += 1
+
+[code]
+  cities: @wikidata.City &
+    country: south korea
+    population > 1 million
+  sheet 1: cities .. #
+    name       {@kr.Hangul}
+    population {@f.Num, comma 3} ` "명"
+    official website
+    
+    
+  
+      
+      
+      
     
     
   
