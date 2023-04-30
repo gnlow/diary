@@ -1625,6 +1625,39 @@ IDE에는 잘못 치면 바로 혼난다.
   - 코드를 최대한 우려먹자
 - 코드는 묵시적으로, IDE를 명시적으로
 - 자연어에 가깝게
+
+230430
+[code]
+  init:
+    1 ~ 7 -> white
+    8 ~ 11 -> black
+  poss: init ..
+    T ->
+      color: T
+      user: a | b | c
+  poss _:
+    white: {color: white}.length
+    black: {color: black}.length
+    {user: a}:
+      white >= 2
+      black >= 2
+    {user: b}:
+      |
+        white >= 2
+        black == 0
+      |
+        black >= 2
+        white == 0
+
+[code]
+  (Nat -> A) .. (A -> B) // Nat -> B
+  city.name
+  cities..name
+  $.cities.name
+  
+  f .. g: $.f.g
+    
+    
   
     
   
