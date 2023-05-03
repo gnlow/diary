@@ -1,0 +1,27 @@
+230504
+object.query
+object.prop
+object.(a+b)
+object:
+  a: 1
+  b: 2
+  a + b: 3
+
+actor.(inner knowledge)
+
+@another_world.ask
+
+@dependency.core
+
+world.{city}..name
+world & city ..name
+
+move From To:
+  distance: (From.x - To.x)^2 + (From.y - To.y)^2 ;. sqrt
+  From.type.
+    knight ->
+      distance: sqrt 5
+
+(From.x - To.x)^2 + (From.y - To.y)^2 ;. sqrt
+((From-To).x)^2 + ((From-To).y)^2 ;. sqrt
+(From-To).(x^2 + y^2) ;. sqrt
