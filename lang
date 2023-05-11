@@ -25,3 +25,51 @@ move From To:
 (From.x - To.x)^2 + (From.y - To.y)^2 ;. sqrt
 ((From-To).x)^2 + ((From-To).y)^2 ;. sqrt
 (From-To).(x^2 + y^2) ;. sqrt
+
+230511
+Person:
+  first name: Str
+  last name: Str
+  full name: (first + last) name
+  birth: Date
+  age:
+    now - birth
+    Int year
+
+persons:
+  Nat ->
+    \ {birth."{year}.{month}.{day}"} {full name}
+  #
+    \ 2000.01.01 James
+    \ 2012.12.12 Tim
+  
+City..
+  name': \ {name} city
+  
+230511
+4: double 2         // double 2 4
+4: double y         // double y 4
+4: double double z  // double (double z) 4
+2: double 1         // double 1 2
+
+---
+double =
+  2 4
+  y 4
+  (double z) 4
+  1 2
+2 =
+  4 double
+  double 1
+4 =
+  double 2
+  double y
+  double (double z)
+y =
+  4 double
+z =
+  4 double double
+1 =
+  2 double
+    
+      
