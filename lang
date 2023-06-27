@@ -77,3 +77,15 @@ x (plus 1 (plus 1 1))
 plus 1 1 x plus 1
 2 x plus 1
 x 3
+
+230628
+Od:
+  length: Num
+  (1 ~ length) -> _.\ ()-x
+  List.count:
+    "x" -> 2
+    "-" ->
+      length.
+        4 -> 0
+        6 -> 2
+  
